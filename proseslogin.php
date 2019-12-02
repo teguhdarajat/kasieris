@@ -10,6 +10,7 @@
 			if ($data['password']==$pass){
 				$_SESSION['login'] = $data['nama_pegawai'];
 				$_SESSION['foto'] = base64_encode($data['image']);
+				$_SESSION['idpegawai'] = $id;
 				header('location:index.php');
 			}else { //password salah
 				$_SESSION['pesan'] = 'password salah';
