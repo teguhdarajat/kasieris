@@ -103,6 +103,7 @@
             <div class="konten-m">
                 <h4>Data Produk</h4>
                 <p id="tes"></p>
+                <form action="post_data.php" method="post">
                 <table class="tabel" id="kasir">
                     <tr>
                         <th>Nama Produk</th>                    
@@ -115,17 +116,17 @@
                 </table>
                 <br>
                 <br>                       
-                <input type="submit" value="Tambah Produk" onclick="location.href='tambah_produk.php'" class="tombol-primer">
+                <!-- <input type="submit" value="Tambah Produk" onclick="location.href='tambah_produk.php'" class="tombol-primer"> -->
             </div>
 
             <div class="konten-s">
-                <input type="search" name="" class="form-input" id="cari">
-                <button style="float: right;" class="tombol-primer tombol-tabel" id="getUser">Cari</button>
+                <!-- <input type="search" name="" class="form-input" id="cari"> -->
+                <!-- <button style="float: right;" class="tombol-primer tombol-tabel" id="getUser">Cari</button> -->
                 <div class="kamera">
                     <video id="preview" width="270" height="270"></video>
                     <input type="hidden" name="qr" :key="scan.date" :value="scan.content" />
                 </div>
-                <table style="width: 100%; margin-top: 20px;" id="hitung">
+                <table style="width: 100%; margin-top: 25px; margin-left: -17px;" id="hitung">
                     <tr style="padding-bottom: 30px;">
                         <td style="text-align: left; font-size: 14pt;">Total: </td>
                         <td style="text-align: right; font-size: 14pt;">Rp. <span id="bayar-subtotal">0</span></td>
@@ -139,9 +140,10 @@
                         <td style="text-align: right; font-size: 14pt;" style="">Rp. <span id="bayar-total">0</span></td>
                     </tr>
                 </table>
-                <form action="data.php" method="post" class="sembunyi">
-                                                          
-                </form>
+                <input type="hidden" name="idbarang[]">
+                <input type="hidden" name="subtotal" id="form-subtotal">
+                <input style="margin-top: 25px; margin-left: -17px; width: 110%;" type="submit" value="Bayar" class="tombol-primer" onclick="postData()" name="tombol-bayar">
+            </form>
             </div>
         </div>
     </div>
@@ -154,6 +156,7 @@
 </footer>
 <script src="/instascan.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src=/script/script.js>""></script>
 <script>
     let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
     scanner.addListener('scan', function(idBarang) {
@@ -183,7 +186,6 @@
     }).catch(function(e) {
         console.error(e);
     });
-
 </script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/3.3.3/adapter.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>

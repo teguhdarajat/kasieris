@@ -12,8 +12,9 @@
                     <td id="harga"><?= $a['harga'] ?></td>
                     <td><input type='number' class="inputan" id='qty' value='1' name="kuantitas[]"></td>
                     <td><input type='number' class="inputan" id='diskon' value='0' name="harga[]"></td>
-                    <td class="subtotal" id="sub-total"><?= $a['harga'] ?></td>                        
+                    <td class="subtotal" id="sub-total"><?= $a['harga'] ?></td>                                                    
                     <td><input type="button" name="hapus" value="Hapus" class="hapus"></td>
+                    <input type="hidden" value="<?= $a['idbarang'] ?>" class="idbarang" name="idbarang">
                 </tr>;                
 
                 <script>                                 
