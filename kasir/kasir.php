@@ -125,7 +125,7 @@
                     <video id="preview" width="270" height="270"></video>
                     <input type="hidden" name="qr" :key="scan.date" :value="scan.content" />
                 </div>
-                <table style="width: 100%; margin-top: 20px;">
+                <table style="width: 100%; margin-top: 20px;" id="hitung">
                     <tr style="padding-bottom: 30px;">
                         <td style="text-align: left; font-size: 14pt;">Total: </td>
                         <td style="text-align: right; font-size: 14pt;">Rp. <span id="bayar-subtotal">0</span></td>
@@ -139,8 +139,8 @@
                         <td style="text-align: right; font-size: 14pt;" style="">Rp. <span id="bayar-total">0</span></td>
                     </tr>
                 </table>
-                <form action="data.php" method="post">
-                    <input type="hidden" name="total" value="" id="input-total">                                        
+                <form action="data.php" method="post" class="sembunyi">
+                                                          
                 </form>
             </div>
         </div>
@@ -162,13 +162,14 @@
         let id = idBarang;
         let i = 0;
         console.log(id)
+
         $.ajax({
             url: "get_data.php",
             method: "post",
             data: "id="+id,
             success: function(data){
-                // console.log(data);
                 $("#kasir").append(data);
+                
             }
 
         })

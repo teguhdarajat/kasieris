@@ -10,24 +10,25 @@
                 <tr id='list-belanja'>
                     <td><?= $a['nama_barang'] ?></td>
                     <td id="harga"><?= $a['harga'] ?></td>
-                    <td><input type='number' class="inputan" id='qty' value='1'></td>
-                    <td><input type='number' class="inputan" id='diskon' value='0'></td>
+                    <td><input type='number' class="inputan" id='qty' value='1' name="kuantitas[]"></td>
+                    <td><input type='number' class="inputan" id='diskon' value='0' name="harga[]"></td>
                     <td class="subtotal" id="sub-total"><?= $a['harga'] ?></td>                        
                     <td><input type="button" name="hapus" value="Hapus" class="hapus"></td>
                 </tr>;                
 
-                <script>                    
+                <script>                                 
                     var $kasir = $('#kasir').first().clone();
+                    var $hitung = $('#hitung').first().clone();
                     var total = 0
+                    var subTotal = 0  
                     $('#kasir input').on('input', function() {
-                        var $tr = $(this).closest('tr'); 
-                        var subTotal = 0                        
+                        var $tr = $(this).closest('tr');                                               
                         var qty = 0
                         var diskon = 0
                         var harga = Number($('#harga', $tr).text())
 
                         $('#qty', $tr).each(function() { 
-                            qty += Number($(this).val()) || 0; 
+                            qty += Number($(this).val()) || 0;                             
                         });
 
                         $('#diskon', $tr).each(function() { 
@@ -41,7 +42,14 @@
                     }).trigger('input');
 
                     $("#kasir").on('click', 'input.hapus', function () {
-                        var $tr    = $(this).closest('#list-belanja');
+                        var $tr = $(this).closest('#list-belanja');
+                        var $tr2 = $(this).closest('tr');                        
+                        var cek = Number($('#sub-total', $tr2).text())  
+                        var bayarSubTotal = Number($('#bayar-subtotal').text)      
+                        subtotal = bayarSubTotal - cek                
+                        console.log("Cek = " + cek)   
+                        console.log("bayar-sub-total" + bayarSubTotal)                  
+                        $('#sub-total', $tr2).text(subTotal);
                         $tr.remove();
                     });                     
 
@@ -59,7 +67,7 @@
                         });                                                                   
                         $('#bayar-subtotal').text(total)    
                                            
-                        console.log(total)                                            
+                        // console.log(total)                                            
                     }                    
                 </script>
             <?php }
