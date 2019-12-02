@@ -1,0 +1,53 @@
+<table width="100%" border="0">
+    <tr>
+        <td>Item</td>
+        <td>Quantity</td>
+        <td>U$ Price</td>
+        <td>Subtotal</td>
+        <td>Add</td>
+        <td>Remove</td>
+    </tr>
+    <tr class="tr_clone">
+        <td>
+            <select style="width:200px" name="itens[]">
+            <option value="0"></option>
+            <option value="1">Item A</option>
+            <option value="2">Item B</option>
+            <option value="3">Item C</option>
+        </td>                                            
+        <td><input type="text" size="5" maxlength="5" name="qtd" class="quantity text ui-widget-content ui-corner-all"></td>
+        <td><input type="text" size="10" maxlength="10" name="price" class="price text ui-widget-content ui-corner-all"></td>
+        <td><input type="text" size="10" maxlength="10" name="subtotal" class="subtotal text ui-widget-content ui-corner-all"></td>
+        <td><input type="button" name="add" value="Add" class="tr_clone_add"></td>
+        <td><input type="button" name="remove" value="Remove" class="tr_clone_remove"></td>
+    </tr>
+    </table>
+
+    <script>
+    var $to_clone = $('.tr_clone').first().clone();
+
+    $("table").on('click', 'input.tr_clone_add', function () {
+    var $tr    = $(this).closest('.tr_clone');
+    var $clone = $to_clone.clone();
+    $clone.find(':text').val('');
+    $tr.after($clone);
+    });
+
+    $("table").on('click', 'input.tr_clone_remove', function () {
+    var $tr    = $(this).closest('.tr_clone');
+    $tr.remove();
+    });
+
+    $(document).on("keyup", ".quantity, .price", function(){
+        var prtCont = $(this).parent().parent();
+        var prce = parseInt(prtCont.find('.price').val()) - 0;
+        var qnty = parseInt(prtCont.find('.quantity').val()) - 0;
+        if(!isNaN(prce) && !isNaN(qnty)){
+            prtCont.find('.subtotal').val(prce * (qnty));
+        } 
+        else{
+            prtCont.find('.subtotal').val("");
+        }
+    });
+
+    </script>

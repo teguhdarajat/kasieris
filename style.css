@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #dcffcc;
+}
+
+
+/* Bagian Header */
+
+header {
+    float: right;
+    background: #fff;
+    width: 100%;
+    padding: 15px;
+    border-bottom: solid 1px #b6b6b6;
+}
+
+.logo {
+    float: left;
+    margin-left: 4em;
+}
+
+.user-menu {
+    float: right;
+    margin-right: 5em;
+}
+
+
+/* .foto-profil {
+    background: url(./Dilraba.jpg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+    display: inline-block;
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 50%;
+    margin-right: 10px;
+} */
+
+.user-menu a {
+    text-decoration: none;
+}
+
+.user-menu .user-name {
+    color: #000000;
+    font-size: 10pt;
+}
+
+.user-menu small {
+    font-size: 9pt;
+    color: #b9b9b9;
+}
+
+
+/* Akhir Bagian Header */
+
+
+/* Awal Bagian Navigasi */
+
+nav {
+    clear: both;
+    width: 100%;
+    padding: 18px;
+    height: 20px;
+    background: #fff;
+    border-bottom: solid 1px #b6b6b6;
+    font-size: 11pt;
+}
+
+nav ul {
+    list-style-type: none;
+    display: block;
+    float: left;
+    margin-left: 4em;
+    height: 100%;
+}
+
+nav li {
+    float: left;
+    margin-right: 22px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #3d3d3d;
+}
+
+nav .aktif {
+    text-decoration: none;
+    color: #378b0f;
+}
+
+.induk {
+    padding-top: 30px;
+    width: 100%;
+}
+
+.judul-page {
+    font-size: 16pt;
+    color: #3d3d3d;
+    margin-left: 4em;
+}
+
+.konten {
+    background: #fff;
+    width: 83%;
+    margin: auto;
+    padding: 40px;
+    margin-top: 40px;
+}
+
+.konten .tabel {
+    margin-top: 40px;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.konten .tabel td,
+.tabel th {
+    border: solid 1px #b6b6b6;
+    padding: 5px;
+}
+
+.konten .tabel tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.konten .tabel tr:hover {
+    background: #ddd;
+}
+
+.konten .tabel th {
+    padding: 10px;
+    background: #378b0f;
+    color: #fff;
+}
+
+.konten-induk {
+    width: 87%;
+    margin: auto;
+    margin-top: 40px;
+    padding: 0;
+}
+
+.konten-m {
+    float: left;
+    background: #fff;
+    width: 60%;
+    padding: 40px;
+    margin: 0;
+}
+
+.konten-m .tabel {
+    margin-top: 40px;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.konten-m .tabel td,
+.tabel th {
+    border: solid 1px #b6b6b6;
+    padding: 5px;
+}
+
+.konten-m .tabel tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.konten-m .tabel tr:hover {
+    background: #ddd;
+}
+
+.konten-m .tabel th {
+    padding: 10px;
+    background: #378b0f;
+    color: #fff;
+}
+
+.konten-s {
+    float: left;
+    background: #fff;
+    width: 23%;
+    padding: 40px;
+    margin-left: 25px;
+}
+
+.dropdown-aksi {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-aksi a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-aksi a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-aksi {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.konten-form {
+    background: #fff;
+    width: 65%;
+    margin: auto;
+    padding: 40px;
+    margin-top: 40px;
+}
+
+.konten-form form {
+    margin: auto;
+    margin-top: 40px;
+}
+
+.konten-form .form-input {
+    width: 95%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+.konten-form select {
+    width: 99%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 5px;
+}
+
+footer {
+    margin-top: 50px;
+    width: 100%;
+    background-color: #fff;
+    padding: 30px;
+    border-top: solid 1px #b6b6b6;
+}
+
+footer span {
+    float: left;
+    margin-left: 3.8em;
+}
+
+.btn-submit {
+    float: left;
+}
+
+.btn-kembali {
+    float: left;
+}
+
+.tombol-primer {
+    background-color: rgba(255, 255, 255, 0);
+    border: solid 1px #378b0f;
+    border-radius: 10px 10px 10px 10px;
+    color: #378b0f;
+    padding: 8px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.tombol-primer:hover {
+    background-color: #378b0f;
+    color: #fff;
+}
+
+.tombol-tabel {
+    padding: 4px 14px;
+}
+
+.kamera {
+    margin-top: 30px;
+    width: 270px;
+    height: 270px;
+    /* background: #000000; */
+}
+
+#video {
+    width: 270px;
+    height: 170px;
+}
+
+#kasir {
+    width: 100%;
+}
+
+.qrcode {
+    float: right;
+    padding-top: 20px;
+}
+
+.lihat {
+    float: left;
+    width: 20%;
+    padding-top: 20px;
+}
+
+.lihat tr {
+    height: 30px;
+}
+
+.foto {
+    object-fit: cover;
+    width: 250px;
+    height: 250px;
+}
+
+.dropdown-user {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 99;
+}
+
+.dropdown-user a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.show {
+    display: block;
+}
