@@ -14,7 +14,7 @@
                     <td><input type='number' class="inputan" id='diskon' value='0' name="harga[]"></td>
                     <td class="subtotal" id="sub-total"><?= $a['harga'] ?></td>                                                    
                     <td><input type="button" name="hapus" value="Hapus" class="hapus"></td>
-                    <input type="hidden" value="<?= $a['idbarang'] ?>" class="idbarang" name="idbarang">
+                    <input type="hidden" value="<?= $a['idbarang'] ?>" class="idbarang" name="idbarang[]">
                 </tr>;                
 
                 <script>                                 

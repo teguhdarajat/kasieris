@@ -14,8 +14,3 @@ window.onclick = function(event) {
         }
     }
 }
-
-function postData() {
-    let total = parseInt(document.getElementById('bayar-subtotal').innerHTML);
-    document.getElementById("form-subtotal").value = total
-}
