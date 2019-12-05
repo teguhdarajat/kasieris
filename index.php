@@ -4,11 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <h2>Sementara Web Under Construction</h2>
-    <h3><a href="/admin/index.php">Aplikasi Khusus Admin</a></h3>
-    <h3><a href="/kasir/index.php">Aplikasi Khusus Kasir</a></h3>
+    <div class="kiri">
+    </div>
+    <div class="kanan">
+        <div class="konten-login">
+            <h1>Halo,</h1>
+            <h1>Selamat Datang</h1>
+            <button class="tombol-primer" onclick="location.href = '/admin/login_admin.php' " style="width: 70%; margin-top: 30px;">Login Sebagai Admin</button><br><br>
+            <button class="tombol-primer" onclick="location.href = '/kasir/login_kasir.php' "style="width: 70%;">Login Sebagai Kasir</button>
+        </div>
+    </div>
 </body>
 </html>

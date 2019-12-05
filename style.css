@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
     background-color: #dcffcc;
 }
 
@@ -13,6 +13,7 @@ body {
 /* Bagian Header */
 
 header {
+    font-family: sans-serif;
     float: right;
     background: #fff;
     width: 100%;
@@ -94,7 +95,7 @@ nav a {
 
 nav .aktif {
     text-decoration: none;
-    color: #378b0f;
+    color: #0A9930;
 }
 
 .induk {
@@ -114,6 +115,7 @@ nav .aktif {
     margin: auto;
     padding: 40px;
     margin-top: 40px;
+    border-radius: 20px;
 }
 
 .konten .tabel {
@@ -139,7 +141,7 @@ nav .aktif {
 
 .konten .tabel th {
     padding: 10px;
-    background: #378b0f;
+    background: #0A9930;
     color: #fff;
 }
 
@@ -181,7 +183,7 @@ nav .aktif {
 
 .konten-m .tabel th {
     padding: 10px;
-    background: #378b0f;
+    background: #0A9930;
     color: #fff;
 }
 
@@ -271,9 +273,9 @@ footer span {
 
 .tombol-primer {
     background-color: rgba(255, 255, 255, 0);
-    border: solid 1px #378b0f;
+    border: solid 1px #0A9930;
     border-radius: 10px 10px 10px 10px;
-    color: #378b0f;
+    color: #0A9930;
     padding: 8px 18px;
     text-align: center;
     text-decoration: none;
@@ -283,7 +285,7 @@ footer span {
 }
 
 .tombol-primer:hover {
-    background-color: #378b0f;
+    background-color: #0A9930;
     color: #fff;
 }
 
@@ -347,4 +349,58 @@ footer span {
 
 .show {
     display: block;
+}
+
+.konten-ml {
+    float: left;
+    background: #fff;
+    /* margin: auto; */
+    margin-right: 36px;
+    width: 24.5%;
+    padding: 40.5px;
+    margin-top: 40px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.container {
+    padding: 0;
+    width: 88%;
+    margin: auto;
+    overflow: visible;
+}
+
+.kiri {
+    float: left;
+    width: 60%;
+    height: 100vh;
+    background: url('bromo.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.kanan {
+    float: right;
+    height: 100vh;
+    width: 40%;
+    background: #fff;
+}
+
+.konten-login {
+    background: #fff;
+    width: 70%;
+    margin: auto;
+    padding: 40px;
+    margin-top: 140px;
+    border-radius: 20px;
+}
+
+.konten-login form {
+    margin-top: 20px;
+}
+
+.konten-login input {
+    width: 80%;
+    margin-bottom: 14px;
 }
