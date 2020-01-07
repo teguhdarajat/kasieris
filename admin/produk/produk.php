@@ -112,8 +112,8 @@
                 <tr>                    
                     <td><?php echo $data['idbarang'] ?></td>
                     <td><?php echo $data['nama_barang']?></td>
-                    <td>Supplier</td>
                     <td><?php echo $data['supplier']?></td>
+                    <td><?php echo $data['harga']?></td>
                     <td><?php echo $data['stok']?></td>
                     <td>
                         <div class="dropdown">

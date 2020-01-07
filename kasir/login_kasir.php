@@ -16,7 +16,7 @@
             <h1>Selamat Datang</h1>
                 <form method="POST" action="proseslogin.php">
 		            ID Pegawai : <br>		
-		            <input type="text" name="id_kasir"><br>
+		            <input type="text" name="id_kasir   "><br>
 		            Password : <br>
 		            <input type="password" name="password"><br>
 		            <br>

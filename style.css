@@ -306,7 +306,9 @@ footer span {
 }
 
 #kasir {
+    border-collapse: collapse;
     width: 100%;
+    padding: 20px;
 }
 
 .qrcode {

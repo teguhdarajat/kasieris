@@ -133,16 +133,15 @@
                 <input type="text" name="id-produk" placeholder="Input ID Produk" class="form-input" value="<?= $data['idbarang'] ?>">
 
                 <label for="id-produk">Nama Produk : </label><br>
-                <input type="text" name="nama-produk" placeholder="Input Nama Produk" class="form-input" value="<?= $data['nama_barang'] ?>">
+                <input type="text" name="produk_nama" placeholder="Input Nama Produk" class="form-input" value="<?= $data['nama_barang'] ?>">
 
                 <label for="id-produk">Supplier Produk : </label><br>
                 <select name="supplier-produk" id="">
                 <?php                    
                     $get_data_supplier = mysqli_query($koneksi, "SELECT * FROM supplier;");
-                    foreach($get_data_supplier as $data){                                        
-                ?>
-                    <option name="supplier-produk" value="">--Pilih---</option>
-                    <option name="supplier-produk" value="<?= $data['idsupplier'] ?>"><?= $data['nama_supplier']  ?></option>
+                    foreach($get_data_supplier as $data1){                                        
+                ?>                    
+                    <option name="supplier-produk" value="<?= $data1['idsupplier'] ?>"><?= $data1['nama_supplier']  ?></option>
                     <?php } ?>
                 </select>
 
@@ -150,7 +149,7 @@
                 <input type="text" name="harga-produk" placeholder="Input Harga Produk" class="form-input" value="<?= $data['harga'] ?>">
 
                 <label for="id-produk">Stok : </label><br>
-                <input type="text" name="stok-produk" placeholder="Input Stok Produk" class="form-input" value="<?= $data['stok'] ?>">
+                <input type="text" name="stok" placeholder="Input Stok Produk" class="form-input" value="<?= $data['stok'] ?>">
 
                 <br><br>
                 <button class="tombol-primer btn-submit">Submit</button>

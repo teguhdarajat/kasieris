@@ -53,7 +53,7 @@
 <body>
 <!-- Awal Bagian Header -->
     <header>
-        <img src="/logo.png" width="120" style="margin-left: 90px">
+        <img src="/logo.png" width="120" class="logo">
         <div class="user-menu" style="margin-top: 10px;">
             <a href="#" onclick="dropDownMenu()" class="tombol-dropdown">
                 <span class="foto-profil"></span>
